@@ -1,6 +1,6 @@
-var bezos = document.getElementById('bezos');
-var bezos_counter = document.getElementById('bezos-counter');
-var bezosCounterStart = document.getElementById('bezos-counter-start');
+var tap = document.getElementById('tap');
+var tap_counter = document.getElementById('tap-counter');
+var tapCounterStart = document.getElementById('tap-counter-start');
 
 var four_hundred = document.getElementById('four-hundred');
 var four_hundred_counter = document.getElementById('four-hundred-counter');
@@ -75,35 +75,20 @@ babies.addEventListener('scroll', function(){
 })
 
 function update_wealth_counter() {
-  if (bezos_viewable()) {
-    if (bezos_counter_viewable()) {
-      let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
-      bezos_counter.innerHTML = (wealth < 185000000000) ? money.format(wealth) : "$185,000,000,000";
+  if (tap_viewable()) {
+    if (tap_counter_viewable()) {
+      let wealth = (window.scrollX - tap.offsetLeft + 175) * (500 * 100);
+      tap_counter.innerHTML = (wealth > 1233000000) ? money.format(wealth) : "$1,233,000,000";
     }
     else {
-      bezos_counter.innerHTML = '';
+      tap_counter.innerHTML = '';
     }
   }
-  else if (four_hundred_viewable()) {
-    if (four_hundred_counter_viewable()) {
-      let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-      four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
-    }
-    else {
-      four_hundred_counter.innerHTML = '';
-    }
+  function tap_viewable() {
+    return window.scrollX < tap.offsetLeft + tap.offsetWidth + 100;
   }
-  function bezos_viewable() {
-    return window.scrollX < bezos.offsetLeft + bezos.offsetWidth + 100;
-  }
-  function bezos_counter_viewable() {
-    return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
-  }
-  function four_hundred_viewable() {
-    return window.scrollX < four_hundred.offsetLeft + four_hundred.offsetWidth + 100;
-  }
-  function four_hundred_counter_viewable() {
-    return four_hundred_counter_start.offsetLeft - window.scrollX < (window.innerWidth);
+  function tap_counter_viewable() {
+    return tapCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
   }
 }
 function toggleZoom() {
@@ -111,3 +96,21 @@ function toggleZoom() {
 }
 
 
+
+// var elem = document.getElementById("myDivId");
+// var pos = getElementPosition(elem);
+
+function getElementPosition(theElement){
+
+  var posX = 0;
+  var posY = 0;
+              
+  while(theElement != null){
+    posX += theElement.offsetLeft;
+    posY += theElement.offsetTop;
+    theElement = theElement.offsetParent;
+  }
+  
+  return {x:posX,y: posY};
+
+}

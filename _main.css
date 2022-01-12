@@ -19,7 +19,7 @@ h1 {
 }
 .scroll-this-way {
   align-self: flex-end;
-  width: 460px;
+  width: 360px;
   height: 165px;
   position: absolute;
   right: 0;
@@ -32,7 +32,7 @@ h1 {
 
   background-image: url(img/right.svg);
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 50%;
   background-position: 50px 40px;
 
   animation-name: bouncy-arrow;
@@ -62,7 +62,6 @@ h1 {
   40% {background-position: 50px 40px;}
   100% {background-position: 50px 40px;}
 }
-
 .wealth-wrapper-outer {
   font-family: sans-serif;
   overflow: visible;
@@ -137,16 +136,23 @@ h1 {
 .title {
   margin-bottom: 5px;
 }
-.wealth > .wealth-title {
-  flex-basis: 1%;
-  padding: 10px;
-}
 .billion .wealth > .wealth-title {
   flex-basis: 110px;
   position: static;
 }
-
-
+.four-hundred .wealth > .wealth-title {
+  flex-basis: 420px;
+}
+.four-hundred .infobox.intro {
+  margin-left: 0;
+  position: relative;
+  width: auto;
+  width: 10000px;
+}
+.wealth > .wealth-title {
+  flex-basis: 1%;
+  padding: 10px;
+}
 @media (max-width: 450px) {
   .wealth-title {
     font-size: 19px;
@@ -160,21 +166,6 @@ h1 {
   color: black;
   margin-top: 0;
 }
-
-
-.ruler {
-  background-image: url('img/ruler.svg');
-  background-repeat: repeat-x;
-  background-position: 0 470px;
-}
-
-
-
-/****************************************************************
-INFOBOXES
-****************************************************************/
-
-
 .text-infobox .title,
 .infobox .chart {
   max-width: 450px;
@@ -236,17 +227,17 @@ INFOBOXES
   margin-left: 8000px;
   width: 15000px;
 }
+.four-hundred .infobox {
+  width: 4000px;
+}
 .flex {
   display: flex;
 }
-
-
-
 .infobox.first {
-  margin-left: 2300px;
+  margin-left: 30000px;
 }
 .infobox.first .title {
-  max-width: 450px;
+  max-width: 390px;
 }
 .infobox.coming-up .title,
 .infobox.five-pixels .title {
@@ -260,12 +251,6 @@ INFOBOXES
 }
 .infobox-close {
   margin-left: 500px;
-}
-.infobox-very-close {
-  margin-left: 200px;
-}
-.infobox-none {
-  margin-left: 00px;
 }
 .sub-infobox {
   margin: 0 40px;
@@ -282,27 +267,17 @@ INFOBOXES
 .column-infobox .sub-infobox {
   margin-bottom: 20px;
 }
-
-
-
-/****************************************************************
-Objects
-****************************************************************/
-
-
-.one-hundred {
+.one-thousand {
   width: 1px;
   height: 1px;
   margin-top: 5px;
 }
-
 .median {
   width: 320px;
 }
 .median .wealth {
-  margin-top: 5px;
-  width: 13.56px;
-  height: 13.56px;
+  width: 9.76px;
+  height: 9.76px;
 }
 .explainer {
   font-size: 16px;
@@ -327,7 +302,7 @@ Objects
   }
 }
 .tap .wealth {
-  width: 74000px;
+  width: 60000px;
   height: 500px;
   background-color: orange;
 }
@@ -337,7 +312,11 @@ Objects
   height: 500px;
   background-color: #03A9F4;
 }
-
+.ruler {
+  background-image: url('img/ruler.svg');
+  background-repeat: repeat-x;
+  background-position: 0 470px;
+}
 .key {
   position: absolute;
   top: 450px;
@@ -354,8 +333,6 @@ Objects
 .tap .key > span {
   background-color: orange;
 }
-
-
 .four-hundred .key > span {
   background-color: #03A9F4;
 }
@@ -371,15 +348,11 @@ Objects
   padding: 5px;
   min-width: 140px;
 }
-
-
-
 .lifetime .square {
-  width: 88.32px;
-  height: 88.32px;
+  width: 41.23px;
+  height: 41.23px;
   background-color: blue;
 }
-
 .healthcare .square {
   width: 4.96px;
   height: 4.96px;
@@ -390,61 +363,51 @@ Objects
   height: 5.4px;
   background-color: blue;
 }
-
-/* municipal budgets 250 M€ */
-.municipal-budgets .square {
+.year-veteran .square {
   height: 400px;
-  width: 6250px;
+  width: 1186px;
   margin-top: 5px;
   background-color: #8BC34A;
-  position: static;
 }
-.municipal-budgets .title {
+.year-veteran .title {
   width: auto;
   padding: 10px;
   max-width: 380px;
   left: 0;
 }
-
-@media (max-width: 450px) {
-  .municipal-budgets .title {
-    max-width: 210px;
-  }
-  .municipal-budgets .square {
-    border-bottom: 4px dashed #75a23e;
-  }
+.year-veteran .square {
+  position: static;
 }
-
-
-/* hospital 132.9 M€ */
-
-.hospital-budget {
+@media (max-width: 450px) {
+ .year-veteran .title {
+   max-width: 210px;
+ }
+ .year-veteran .square {
+   border-bottom: 4px dashed #75a23e;
+ }
+}
+.year-chemo {
   width: auto;
 }
-.hospital-budget .square {
+.year-chemo .square {
   height: 400px;
-  width: 3322.5px;
+  width: 22500px;
   background-color: #03A9F4;
   border: 5px dashed #0078af;
   box-sizing: border-box;
 }
-.hospital-budget .square .title {
+.year-chemo .square .title {
   padding: 10px;
   position: sticky;
   left: 1px;
   display: inline-block;
 }
-.hospital-budget .key {
+.year-chemo .key {
   top: 310px;
 }
-.hospital-budget .key > span {
+.year-chemo .key > span {
   background-color: #03A9F4;
 }
-
-
-
-
-/* others */
 .celebrities {
   display: flex;
   width: auto;
