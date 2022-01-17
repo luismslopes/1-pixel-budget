@@ -9,13 +9,11 @@ var four_hundred_counter_start = document.getElementById('four-hundred-counter-s
 var sixtyPercent = document.getElementById('sixty-percent');
 var sixtyPercentIndicator = document.getElementById('sixty-percent-indicator');
 var sixtyPercentScrollPercentage = 0.0;
-var babies = document.getElementById('babies-wrapper');
-var baby_counter = document.getElementById('baby-counter');
 
-var thousand = new Intl.NumberFormat('en-US')
-var money = new Intl.NumberFormat('en-US', {
+var thousand = new Intl.NumberFormat('pt-PT')
+var money = new Intl.NumberFormat('pt-PT', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'EUR',
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
@@ -62,23 +60,19 @@ function generate_sixty_percent() {
 generate_sixty_percent();
 
 sixtyPercent.addEventListener('scroll', function(){
-  let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 60).toFixed(1);
+  let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 72).toFixed(1);
   if (sixtyPercentScrollPercentage !== newScroll) {
     sixtyPercentScrollPercentage = newScroll;
     sixtyPercentIndicator.innerHTML = newScroll + '%';
   }
-})
-babies.addEventListener('scroll', function(){
-  let is_mobile = window.innerWidth <= 450;
-  let bg_size = (is_mobile) ? 68 : 160;
-  baby_counter.innerHTML = thousand.format(Math.floor(babies.scrollTop / bg_size * 5));
 })
 
 function update_wealth_counter() {
   if (tap_viewable()) {
     if (tap_counter_viewable()) {
       let wealth = (window.scrollX - tap.offsetLeft + 175) * (500 * 100);
-      tap_counter.innerHTML = (wealth > 1233000000) ? money.format(wealth) : "$1,233,000,000";
+      //tap_counter.innerHTML = (wealth > 1060000000) ? money.format(wealth) : "1 060 000 000 €";
+      tap_counter.innerHTML = money.format(wealth) ;
     }
     else {
       tap_counter.innerHTML = '';

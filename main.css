@@ -10,9 +10,18 @@ html,
 .title-screen {
   width: 100vw;
 }
+
 h1 {
   text-align: center;
   font-size: 60px;
+  line-height: 0.9;
+  width: 100%;
+  margin-top: 100px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
   line-height: 0.9;
   width: 100%;
   margin-top: 100px;
@@ -52,6 +61,11 @@ h1 {
   .scroll-this-way {
     right: -35vw;
   }
+
+  .title-screen {
+    width: 95vw;
+  }
+  
 }
 @keyframes bouncy-arrow {
   0% {background-position: 50px 40px;}
@@ -327,7 +341,7 @@ Objects
   }
 }
 .tap .wealth {
-  width: 74000px;
+  width: 64000px;
   height: 500px;
   background-color: orange;
 }
@@ -375,26 +389,40 @@ Objects
 
 
 .lifetime .square {
-  width: 88.32px;
-  height: 88.32px;
+  width: 77.33px;
+  height: 77.33px;
   background-color: blue;
 }
+
+.doctor .square {
+  width: 148.32px;
+  height: 148.32px;
+  background-color: #0661b9;
+}
+
+.nurse .square {
+  width: 95.6px;
+  height: 95.6px;
+  background-color: #008a61;
+}
+
+.piloto .square {
+  width: 216.8px;
+  height: 216.8px;
+  background-color: #9daebf;
+}
+
 
 .healthcare .square {
   width: 4.96px;
   height: 4.96px;
   background-color: blue;
 }
-.amazon-year .square {
-  width: 5.4px;
-  height: 5.4px;
-  background-color: blue;
-}
 
-/* municipal budgets 250 M€ */
+/* municipal budgets 219 M€ */
 .municipal-budgets .square {
   height: 400px;
-  width: 6250px;
+  width: 5475px;
   margin-top: 5px;
   background-color: #8BC34A;
   position: static;
@@ -423,7 +451,7 @@ Objects
 }
 .hospital-budget .square {
   height: 400px;
-  width: 3322.5px;
+  width: 3325px;
   background-color: #03A9F4;
   border: 5px dashed #0078af;
   box-sizing: border-box;
@@ -443,42 +471,110 @@ Objects
 
 
 
+/* familias */
+.people {
+  background-image: url('img/person.svg');
+  background-size: 20px;
+}
+.people.first {
+  margin-top: -1040px;
+}
+.people-wrapper-outer h2 {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  margin: 5px;
+}
+.people-wrapper {
+  width: 800px;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.four-hundred-people .people {
+  width: 800px;
+  height: 400px;
+}
+.sixty-percent-people .people {
+  width: 800px;
+  height: 22700px;
+}
+.sixty-percent-people .people-wrapper {
+  box-shadow: inset 0 0 10px #000000;
+}
+.bubble {
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 4px 4px 5px;
+  font-size: 28px;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+}
+.people-label {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+.scroll-indicator {
+  position: absolute;
+  top: 40%;
+  left: 260px;
+  font-size: 18px;
+  max-width: 240px;
+}
+.people-sub-label {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.people-wrapper .percent {
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px;
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: 1000px;
+  top: 160px;
+  margin-left: 350px;
+}
+@media (max-width: 450px) {
+  .people {
+    background-size: 10px;
+  }
+  .people-wrapper {
+    width: 200px;
+    height: 400px;
+  }
+  .four-hundred-people .people {
+      width: 200px;
+      height: 400px;
+  }
+  .sixty-percent-people .people {
+    width: 200px;
+    height: 22700px;
+  }
+  .people-label {
+    left: 15px;
+    font-size: 20px;
+  }
+  .people-wrapper .percent {
+    margin-left: 66px;
+  }
+}
+
+
+
 
 /* others */
-.celebrities {
-  display: flex;
-  width: auto;
-}
-.beyonce .square {
-  height: 350px;
-  width: 1142px;
-  background-color: #406994;
-}
-.goldman .square {
-  width: 223px;
-  height: 223px;
-  background-color: #64A8F0;
-}
-.tim-cook .square {
-  width: 1785px;
-  height: 350px;
-  background-color: #71889e;
-}
-.doctor .square {
-  width: 81.8px;
-  height: 81.8px;
-  background-color: #0661b9;
-}
-.lawyer .square {
-  width: 63.2px;
-  height: 63.2px;
-  background-color: #00478a;
-}
-.hedgefund .square {
-  width: 289.8px;
-  height: 289.8px;
-  background-color: #9daebf;
-}
+
+
+
 .line-chart svg {
   max-width: 100%;
 }
@@ -544,101 +640,7 @@ Objects
 .no-single-human .title {
   max-width: 390px;
 }
-.people {
-  background-image: url('img/person.svg');
-  background-size: 20px;
-}
-.people.first {
-  margin-top: -1040px;
-}
-.people-wrapper-outer h2 {
-  font-size: 16px;
-  font-weight: normal;
-  text-align: center;
-  margin: 5px;
-}
-.people-wrapper {
-  width: 800px;
-  height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.four-hundred-people .people {
-  width: 800px;
-  height: 400px;
-}
-.sixty-percent-people .people {
-  width: 800px;
-  height: 1974000px;
-}
-.sixty-percent-people .people-wrapper {
-  box-shadow: inset 0 0 10px #000000;
-}
-.bubble {
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 4px 4px 5px;
-  font-size: 28px;
-  background-color: white;
-  text-align: center;
-  padding: 10px;
-}
-.people-label {
-  position: absolute;
-  top: 40%;
-  left: 39%;
-}
-.scroll-indicator {
-  position: absolute;
-  top: 40%;
-  left: 260px;
-  font-size: 18px;
-  max-width: 240px;
-}
-.people-sub-label {
-  font-weight: normal;
-  font-style: italic;
-  font-size: 14px;
-  margin-top: 4px;
-}
-.people-wrapper .percent {
-  background-color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 4px 4px 5px;
-  padding: 10px;
-  position: -webkit-sticky;
-  position: sticky;
-  margin-top: 1000px;
-  top: 160px;
-  margin-left: 350px;
-}
-@media (max-width: 450px) {
-  .people {
-    background-size: 10px;
-  }
-  .people-wrapper {
-    width: 200px;
-    height: 400px;
-  }
-  .four-hundred-people .people {
-      width: 200px;
-      height: 400px;
-  }
-  .sixty-percent-people .people {
-    width: 200px;
-    height: 1974000px;
-  }
-  .people-label {
-    left: 35px;
-    font-size: 20px;
-  }
-  .people-wrapper .percent {
-    margin-left: 66px;
-  }
-}
+
 .ninety-wrapper {
   width: 590px;
   max-width: 96vw;
@@ -678,15 +680,23 @@ Objects
     font-size: 17px;
   }
 }
+
+
+.three-percent .piechart-inner {
+  stroke-dasharray: 3 100;
+}
+
+.twenty-percent .piechart-inner {
+  stroke-dasharray: 20 100;
+}
+
 .point-zero-three-percent .piechart-inner {
   stroke-dasharray: .03 100;
 }
 .two-point-seven-percent .piechart-inner {
   stroke-dasharray: 2.7 100;
 }
-.three-percent .piechart-inner {
-  stroke-dasharray: 3 100;
-}
+
 .five-percent .piechart-inner {
   stroke-dasharray: 5 100;
 }
