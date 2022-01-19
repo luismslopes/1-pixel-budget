@@ -22,5 +22,5 @@ A ideia desta página é demonstrar de forma interactiva e clara a escala do inv
 - Rendimento Médio Piloto [[1](https://eco.sapo.pt/2020/12/16/pilotos-da-tap-chegam-a-ganhar-mais-do-dobro-que-os-da-iberia-e-air-europa/) considerada remuneração de entrada de 90000€/ano] [[2](https://www.mobills.com.br/calculadoras/calculadora-juros-compostos/) 2% de incremento médio salarial anual]
 
 # Sobre o Autor
-Esta página foi desenvolvida por [Luis Lopes](https://github.com/luismslopes), membro 978 do partido Iniciativa Liberal, com ligações ao distrito da Guarda e dos Açores.
-Baseado no código de [Matt Korostoff](https://mkorostoff.github.io/1-pixel-wealth/)
+Esta página foi desenvolvida por [Luis Lopes](https://github.com/luismslopes), membro do partido Iniciativa Liberal, com ligações ao distrito da Guarda e dos Açores.
+Baseado na ideia e código de [Matt Korostoff](https://mkorostoff.github.io/1-pixel-wealth/)
