@@ -506,11 +506,11 @@ background-color: crimson;
 /* guarda */
 .il-guarda-logo {
   background-image: url('img/il-guarda.jpeg');
-  background-size: 80px;
+  background-size: 120px;
   background-position: center center;
-  width: 80px;
-  height: 80px;
-  border-radius: 100px;
+  width: 120px;
+  height: 120px;
+  border-radius: 140px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
