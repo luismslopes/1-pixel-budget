@@ -516,6 +516,36 @@ background-color: crimson;
   margin-bottom: 30px;
 }
 
+.title-screen.last .vote{
+  margin-top:100px;
+}
+
+@media (max-width: 450px) {
+  .title-screen.main h1 {
+    font-size: 36px;
+    margin-top:60px; margin-bottom: 10px;
+  }
+  .title-screen.main h2 {
+    font-size: 23px;
+  }
+
+  
+
+  .title-screen.last .vote{
+    margin-top:40px;
+  }
+
+  .title-screen.last h1{
+    font-size: 34px;
+  }
+
+  .title-screen.last .slogan{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
 /* familias */
 .people {
   background-image: url('img/person.svg');
