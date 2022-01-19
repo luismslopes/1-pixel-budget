@@ -10,6 +10,12 @@ html,
 .title-screen {
   width: 100vw;
 }
+.title-screen.middle-screen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 h1 {
   text-align: center;
@@ -17,6 +23,14 @@ h1 {
   line-height: 0.9;
   width: 100%;
   margin-top: 100px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h2.center{
+  text-align: center;
 }
 
 h3 {
@@ -32,8 +46,8 @@ h3 {
   height: 165px;
   position: absolute;
   right: 0;
-  bottom: 0;
-  padding-top: 42px;
+  bottom: 70px;
+  padding-top: 22px;
   padding-left: 48px;
 
   font-size: 30px;
@@ -155,10 +169,7 @@ h3 {
   flex-basis: 1%;
   padding: 10px;
 }
-.billion .wealth > .wealth-title {
-  flex-basis: 110px;
-  position: static;
-}
+
 
 
 @media (max-width: 450px) {
@@ -289,7 +300,6 @@ INFOBOXES
 }
 .midtext-wrapper {
   display: flex;
-  justify-content: space-around;
   margin-top: 150px;
   width: 60%;
 }
@@ -304,6 +314,9 @@ Objects
 ****************************************************************/
 
 
+.one{
+  width: 100px;
+}
 .one-hundred {
   width: 1px;
   height: 1px;
@@ -330,11 +343,35 @@ Objects
   height: 100px;
   background-color: #4CAF50;
 }
+
+
+
+.billion .wealth-title {
+  min-width: 200px;
+}
 .billion .wealth {
   width: 20000px;
   height: 500px;
   background-color: #03A9F4;
 }
+.billion .vertical {
+  display: flex;
+}
+.billion .vertical > h2{
+  width: 400px;
+  align-self: center;
+  text-align: right;
+  padding-right: 16px;
+}
+.billion .vertical > .wealth{
+width: 10px;
+height: 500px;
+background-color: crimson;
+}
+.billion .vertical.fifty-vertical > .wealth{
+  width: 50px;
+}
+
 @media (max-width: 450px) {
   .billion .wealth {
     border-bottom: 3px dotted #007fb7;
@@ -344,6 +381,9 @@ Objects
   width: 64000px;
   height: 500px;
   background-color: orange;
+}
+.tap .wealth-title{
+  min-width: 400px;
 }
 .four-hundred .wealth {
   margin-left: 100px;
@@ -425,22 +465,16 @@ Objects
   width: 5475px;
   margin-top: 5px;
   background-color: #8BC34A;
-  position: static;
 }
-.municipal-budgets .title {
+.municipal-budgets .square .title {
   width: auto;
   padding: 10px;
   max-width: 380px;
   left: 0;
+  position:sticky;
 }
-
-@media (max-width: 450px) {
-  .municipal-budgets .title {
-    max-width: 210px;
-  }
-  .municipal-budgets .square {
-    border-bottom: 4px dashed #75a23e;
-  }
+.municipal-budgets .midtext-wrapper {
+  width: 100%;
 }
 
 
@@ -453,7 +487,6 @@ Objects
   height: 400px;
   width: 3325px;
   background-color: #03A9F4;
-  border: 5px dashed #0078af;
   box-sizing: border-box;
 }
 .hospital-budget .square .title {
@@ -470,6 +503,18 @@ Objects
 }
 
 
+/* guarda */
+.il-guarda-logo {
+  background-image: url('img/il-guarda.jpeg');
+  background-size: 80px;
+  background-position: center center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
 
 /* familias */
 .people {
@@ -908,7 +953,7 @@ Objects
 }
 @media (max-width: 450px) {
   h3 {
-    font-size: 14px;
+    /*font-size: 14px;*/
   }
 }
 .cares .chart {
