@@ -1,5 +1,7 @@
 body, html {
   margin: 0;
+
+  
 }
 body,
 html,
@@ -17,6 +19,9 @@ html,
   flex-direction: column;
 }
 
+h1, h2, h3, h4, h5, h6, p, li span {
+  font-family: Raleway, sans-serif ;
+}
 h1 {
   text-align: center;
   font-size: 60px;
@@ -64,20 +69,38 @@ h3 {
   animation-direction: forward;
   animation-duration: 3s;
 }
+
 .footer {
   position: absolute;
   bottom: 40px;
   text-align: center;
   font-size: 12px;
-  width: 100%;
+  width: 100vw;
 }
+
+.social{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.social .twitter-share-button{
+  margin-left: 20px;
+}
+
 @media (max-width: 450px) {
   .scroll-this-way {
     right: -35vw;
   }
 
   .title-screen {
-    width: 95vw;
+    width: 94vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
+  .footer {
+    width: 94vw;
   }
   
 }
@@ -92,7 +115,7 @@ h3 {
 }
 
 .wealth-wrapper-outer {
-  font-family: sans-serif;
+  font-family: Raleway, sans-serif ;
   overflow: visible;
   display: inline-block;
 }
@@ -377,6 +400,10 @@ background-color: crimson;
     border-bottom: 3px dotted #007fb7;
   }
 }
+
+.tap {
+  margin-right: 0;
+}
 .tap .wealth {
   width: 64000px;
   height: 500px;
@@ -513,23 +540,41 @@ background-color: crimson;
   border-radius: 140px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+
+.title-screen.last{
+  margin-left: 80px
 }
 
 .title-screen.last .vote{
-  margin-top:100px;
+  margin-top:50px;
+}
+
+.title-screen.last .slogan{
+  padding: 10px;
+  background-color: #c3007a;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+
+  max-width: 450px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (max-width: 450px) {
   .title-screen.main h1 {
     font-size: 36px;
-    margin-top:60px; margin-bottom: 10px;
+    margin-top:50px;
+    margin-bottom: 10px;
   }
   .title-screen.main h2 {
     font-size: 23px;
   }
-
-  
 
   .title-screen.last .vote{
     margin-top:40px;
@@ -537,12 +582,19 @@ background-color: crimson;
 
   .title-screen.last h1{
     font-size: 34px;
+    margin-top: 50px;
   }
 
   .title-screen.last .slogan{
     text-align: center;
     margin-top: 40px;
     font-size: 20px;
+  }
+
+  .il-guarda-logo {
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -898,89 +950,7 @@ background-color: crimson;
   height: 95vh;
   width: 90vw;
 }
-.malaria .babies {
-  height: 8800320px;
-  background-size: 160px;
-  background-image: url(img/baby.svg);
-}
-.malaria .babies-wrapper {
-  box-shadow: inset 0 0 10px #00000042;
-  width: 800px;
-  height: 320px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.baby-counter {
-  top: 127px;
-  position: sticky;
-  display: inline-block;
-  left: 350px;
-  margin-top: 1800px;
-}
-@media (max-width: 450px) {
-  .malaria .babies-wrapper {
-    max-width: 340px;
-    height: 340px;
-  }
-  .malaria .babies {
-    background-size: 68px;
-    height: 3740340px;
-  }
-  .scroll-indicator {
-    top: 38%;
-    left: 40px;
-  }
-  .baby-counter {
-    left: 135px;
-  }
-}
-.infectious {
-  display: flex;
-  align-items: center;
-}
-.ebola-bar {
-  max-width: 300px;
-}
-.ebola-bar .title {
-  max-width: 100%;
-}
-.ebola-bar .square {
-  height: 122px;
-  width: 122px;
-  background-color: #00bb42;
-}
-.corona-bar .title,
-.malaria-bar .title {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  text-align: center;
-}
-.malaria-bar .square {
-  height: 400px;
-  width: 1022px;
-  background-color: #66c35a;
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-}
-.corona-bar .square {
-  height: 400px;
-  width: 500px;
-  background-color: green;
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-}
-.corona-bar,
-.malaria-bar,
-.ebola-bar {
-  color: black;
-  margin: 50px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+
 @media (max-width: 450px) {
   h3 {
     /*font-size: 14px;*/
@@ -989,19 +959,7 @@ background-color: crimson;
 .cares .chart {
   text-align: center;
 }
-.worldchart-wrapper {
-  display: flex;
-}
-.worldchart {
-  text-align: center;
-  width: 320px;
-}
-.worldchart img {
-  max-width: 100%;
-}
-.worldchart-wrapper .description {
-  text-align: center;
-}
+
 .all-of-them .title {
   width: 370px;
 }
